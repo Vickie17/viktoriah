@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: turquoise;
+}
+/*Desktop view*/
+/* Quiz-home section */
+.quiz_home {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: none;
+}
+.quiz_home.show{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+}
+.custom_box {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 100px 280px;
+}
+
+/* Quiz-box section */
+.custom_box1 {
+    background-color: gray;
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 100px 280px;
+    border-radius: 20px;
+}
+.btn {
+    background-color: teal;
+    border: 2px solid teal;
+    padding: 14px 40px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    margin:0 10px;
+    
+}
+.btn:focus {
+    outline: none;
+}
+.quiz_box {
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+}
+.quiz_box.show {
+    display: block;
+}
+
+.quiz_box .start {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.quiz_box .start .question_number {
+    margin-left: -100px;
+    text-align: left;
+}
+.quiz_box .start .score_board {
+    margin-right: -150px;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+}
+.quiz_box .start .score_board .correct_ans {
+    font-weight: 700;
+}
+
+.quiz_box .question_text {
+    font-size: 30px;
+    color: #665b49;
+    background-color: white;
+    padding: 50px 10px;
+    margin: 40px -100px;
+    border-radius: 10px;
+    border: 2px solid white;
+    width: 500px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.quiz_box .option_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -30px;
+}
+.quiz_box .option_box .option {
+    background-color: white;
+    margin-top: 5px;
+    padding: 14px 15px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 60px;
+    width: 250px;
+    
+}
+.quiz_box .option_box .option.already_answered{
+    pointer-events: none;
+}
+.quiz_box .option_box .option.show-correct{
+    background-color: green;
+    border-color: green;
+    color: white;
+    transition: all .3s ease;
+}
+.quiz_box .option_box .option.correct {
+    background-color: green;
+    border-color: green;
+    color: white;
+}
+.quiz_box .option_box .option.wrong {
+    background-color: red;
+    border-color: red;
+    color: white;
+    animation: shake 1s linear;
+}
+@keyframes shake {
+    0%,20%,40% {
+        transform: translateX(10px);
+    }
+    60%{
+        transform: translateX(-7px);
+    }
+    80%{
+        transform: translateX(4px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.quiz_box .next_question_btn {
+    margin: 40px 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+.view_result_btn {
+    margin: 40px 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+.view_result_btn, .next_question_btn {
+    display: none;
+}
+.view_result_btn.show,.next_question_btn.show{
+    display: inline-block;
+    animation: fadeInRight 1s ease;
+}
+
+/* Quiz-over section */
+
+.quiz_over {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+}
+.quiz_over.show{
+    display: block;
+}
+.quiz_over h1 {
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    color: teal;
+    margin:0 0 30px;
+}
+.quiz_over h4 {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #444444;
+    margin: 15px 0 25px;
+}
+.quiz_over h4 span{
+    font-weight: 800;
+    color: #111111;
+}
+
+/* Responsiveness on landscape view*/
+@media(min-width: 819px) {
+    .btn{
+        font-size: 20px;
+        margin: 0 10px;
+        padding: 14px 40px;
+    }
+    .quiz_box.question_text{
+        font-size: 30px;
+        padding: 50px 10px;
+        margin: 40px -130px;
+    }
+    .quiz_box.option_box{
+        margin-top: -35px;
+    }
+    .next_question_btn{
+        margin: 40px 70px;
+    }
+    .quiz_over h1{
+        font-size: 70px;
+        margin: 0 0 30px;
+    }
+    .quiz_over h4{
+        font-size: 25px;
+        font-weight: normal;
+        margin: 15px 0 25px;
+    }
+    
+}

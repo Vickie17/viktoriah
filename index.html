@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Quiz Game</title>
+</head>
+<body>
+    <!-- Start Quiz Button lies here -->
+    <div class="quiz_home custom_box show">
+        <button type="button" class="start_quiz_btn btn">Start Quiz</button>
+    </div>
+    
+    <div class="quiz_box custom_box1">
+        <div class="start">
+            <div class="question_number">
+                <span class="current_question">Question:</span>
+                <span class="current_question_number"></span>
+            </div>
+            <!-- visible score lies here -->
+            <div class="score_board">
+                <span class="score_text">Score:</span>
+                <span class="correct_ans"></span>
+            </div>    
+        </div>
+        <!-- Question lies here -->
+        <div class="question_text">
+            What is the capital of Senegal
+        </div>
+        <!-- Option lies here -->
+        <div class="option_box">
+            
+        </div>
+        <!-- next-question button and result button lies here -->
+        <div class="next_question">
+            <button type="button" class="next_question_btn btn">Next</button>
+            <button type="button" class="view_result_btn btn">Result</button>
+        </div>
+
+    </div>
+        <!-- Quiz Result shows here -->
+    <div class="quiz_over custom_box1">
+        <h1>Result</h1>
+        <h4>Total Questions: <span class="total_questions"></span></h4>
+        <h4>Correct: <span class="total_correct"></span></h4>
+        <h4>Percentage: <span class="percentage"></span></h4>
+
+    </div>
+
+<!-- JavaScript codes lies here -->
+<script src="script.js"></script>  
+</body>
+</html>
